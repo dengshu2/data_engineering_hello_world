@@ -1,0 +1,29 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 数据文件
+data/raw/*
+data/processed/*
+data/final/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/final/.gitkeep 
+
+# 日志文件
+logs/*
+!logs/.gitkeep
+
+# 环境变量文件
+.env
+
+# 虚拟环境
+venv/
+.venv/
+
+# IDE 文件
+.idea/
+.vscode/
+
+
+
