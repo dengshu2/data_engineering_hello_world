@@ -3,6 +3,7 @@ name = "data-engine-hello-world"
 version = "0.1.0"
 description = "A simple data engine project"
 authors = ["dengsu2 <dengshu5115@gmail.com>"]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -10,7 +11,7 @@ pandas = "^2.0.0"
 numpy = "^1.26.0"
 polars = "^0.18.0"
 duckdb = "^0.8.0"
-daft = "^0.2.0"
+getdaft = "^0.4.0"
 openpyxl = "^3.1.0"
 pyyaml = "^6.0.0"
 loguru = "^0.7.0"

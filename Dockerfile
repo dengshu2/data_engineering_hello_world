@@ -14,13 +14,16 @@ RUN apt-get update && apt-get install -y curl build-essential && rm -rf /var/lib
 # 将 Poetry 添加到 PATH
 ENV PATH="/root/.local/bin:$PATH"
 
+# 配置 Poetry 不创建虚拟环境，直接安装到系统 Python 环境
+RUN poetry config virtualenvs.create false
+
 # 复制项目文件
 COPY pyproject.toml .
 COPY src/ ./src/
 COPY scripts/ ./scripts/
 
 # 安装依赖
-RUN poetry install --no-dev --no-interaction
+RUN poetry install --without dev --no-interaction
 
 # 创建必要的目录结构
 RUN mkdir -p data/raw data/processed data/final logs
@@ -29,6 +32,6 @@ RUN mkdir -p data/raw data/processed data/final logs
 ENV PYTHONPATH=/app
 ENV PROJECT_ROOT=/app
 
-# 设置入口点
-ENTRYPOINT ["poetry", "run", "python", "-m", "src.pipeline.main"]
+# 使用CMD而不是ENTRYPOINT，保持容器运行
+CMD ["tail", "-f", "/dev/null"]
 

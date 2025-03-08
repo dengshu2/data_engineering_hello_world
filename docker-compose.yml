@@ -1,11 +1,12 @@
-version: '3.8'
-
 services:
   data_engine:
     build: .
     volumes:
-      # 挂载当前目录到容器中  
-      - .:/app
+      # 只挂载源代码、数据和日志目录，而不是整个项目目录
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./scripts:/app/scripts
     # 设置环境变量
     environment:
       # 设置 Python 不缓冲标准输出
