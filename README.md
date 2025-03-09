@@ -59,7 +59,7 @@ data_engineering_hello_world/
 
 ```bash
 git clone https://github.com/dengshu2/data_engineering_hello_world.git
-cd data-engineering-hello-world
+cd data_engineering_hello_world
 ```
 
 2. 设置环境：
