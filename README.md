@@ -58,7 +58,7 @@ data_engineering_hello_world/
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/yourusername/data-engineering-hello-world.git
+git clone https://github.com/dengshu2/data_engineering_hello_world.git
 cd data-engineering-hello-world
 ```
 
