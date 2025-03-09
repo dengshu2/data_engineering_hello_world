@@ -16,7 +16,7 @@ PROCESSED_DATA_DIR = DATA_DIR / 'processed'
 FINAL_DATA_DIR = DATA_DIR / 'final'
 
 # 日志目录
-LOG_DIR = PROJECT_ROOT / 'logs'
+LOGS_DIR = PROJECT_ROOT / 'logs'
 
 # 数据文件路径
 RAW_CSV_PATH = RAW_DATA_DIR / 'sample_data.csv'

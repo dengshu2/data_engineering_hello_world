@@ -9,7 +9,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from src.config import LOG_DIR
+from src.config import LOGS_DIR
 
 
 def setup_logger():
@@ -24,10 +24,10 @@ def setup_logger():
         配置好的 logger 实例
     """
     # 确保日志目录存在
-    Path(LOG_DIR).mkdir(parents=True, exist_ok=True)
+    Path(LOGS_DIR).mkdir(parents=True, exist_ok=True)
 
     # 生成带时间戳的日志文件名
-    log_file = LOG_DIR / f'pipeline_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
+    log_file = LOGS_DIR / f'pipeline_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
 
     # 移除默认的日志记录器
     logger.remove()
